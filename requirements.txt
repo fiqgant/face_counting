@@ -1,0 +1,5 @@
+opencv-contrib-python
+Pillow
+numpy
+streamlit-webrtc
+streamlit
