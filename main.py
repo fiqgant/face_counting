@@ -90,7 +90,9 @@ def run():
             '''<h4 style='text-align: left; color: #d73b5c;'>* It might not work with the Android Camera"</h4>''',
             unsafe_allow_html=True)
         webrtc_ctx = webrtc_streamer(
-            key="example",
+            key="object-detection",
+            media_stream_constraints={"video": True, "audio": False},
+            async_processing=True,
             video_processor_factory=VideoTransformer,
         )
         if webrtc_ctx.video_transformer:
