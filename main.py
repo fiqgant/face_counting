@@ -16,10 +16,6 @@ class VideoTransformer(VideoTransformerBase):
     def __init__(self):
         self.face_count = 0
 
-        # Set the desired webcam resolution
-        self.cap = cv2.VideoCapture(0)
-        self.cap.set(3, 1280)  # Width
-        self.cap.set(4, 720)   # Height
 
     def transform(self, frame):
         img = frame.to_ndarray(format="bgr24")
