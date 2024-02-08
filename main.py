@@ -6,6 +6,7 @@ import base64
 from io import BytesIO
 from PIL import Image
 import os
+from pathlib import Path
 
 # Main web-app using Streamlit
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_alt.xml')
@@ -94,7 +95,7 @@ def run():
             unsafe_allow_html=True)
         webrtc_ctx = webrtc_streamer(
             key="example",
-            video_transformer_factory=VideoTransformer,
+            video_processor_factory=VideoTransformer,
         )
         if webrtc_ctx.video_transformer:
             pass
